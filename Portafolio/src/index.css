@@ -7,4 +7,43 @@
     --color-third-main: #b3e5fc;
     --color-primary-text: #000000;
     --color-secondary-text: #8f8f8f;
+
+    
+
+    --animate-w1: w1 7s linear infinite;
+    --animate-w2: w2 7s linear -.125s infinite;
+
+    @keyframes w1 {
+        0%{
+            margin-left: 0;
+        }
+        100%{
+            margin-left: -1600px;
+        }
+    }
+
+    @keyframes w2 {
+        0%{
+            margin-left: 0;
+        }
+        100%{
+            margin-left: -1600px;
+        }
+        0%, 100%{
+            transform: translateY(-25px);
+        }
+        25%{
+            transform: translateY(10px);
+        }
+    }
+
+    @keyframes desplazamiento {
+        0%, 100%{
+            transform: translateY(-25px);
+        }
+        25%{
+            transform: translateY(10px);
+        }
+    }
 }
+
