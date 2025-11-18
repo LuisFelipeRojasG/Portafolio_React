@@ -1,7 +1,8 @@
 import { TiThMenu } from "react-icons/ti"
+import type { JSX } from "react"
 
 
-function Header() {
+const Header = (): JSX.Element => {
     return (
         <header className="fixed w-full h-[75px] z-10 flex justify-between px-10 items-center bg-primary-main">
             <div className="w-auto h-auto text-center px-3 py-1 border-2 border-solid border-third-main rounded-sm text-third-main">
