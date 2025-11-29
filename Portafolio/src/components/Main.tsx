@@ -3,6 +3,7 @@ import AnimatedWave from "./AnimatedWave"
 import Introduction from "./Introduction"
 import About from "./About"
 import Education from "./Education"
+import Certifications from "./Certifications"
 
 
 const Main = (): JSX.Element => {
@@ -17,7 +18,8 @@ const Main = (): JSX.Element => {
             <hr className="w-full border-t-8 border-double border-secondary-main" />
             <Education/>
             <hr className="w-full border-t-8 border-double border-secondary-main" />
-            <section></section>
+            <Certifications />
+            <hr className="w-full border-t-8 border-double border-secondary-main" />
             <section></section>
         </main>
     )
