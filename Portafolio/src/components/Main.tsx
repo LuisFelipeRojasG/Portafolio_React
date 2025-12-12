@@ -4,6 +4,7 @@ import Introduction from "./Introduction"
 import About from "./About"
 import Education from "./Education"
 import Certifications from "./Certifications"
+import Stack from "./Stack"
 
 
 const Main = (): JSX.Element => {
@@ -20,7 +21,8 @@ const Main = (): JSX.Element => {
             <hr className="w-full border-t-8 border-double border-secondary-main" />
             <Certifications />
             <hr className="w-full border-t-8 border-double border-secondary-main" />
-            <section></section>
+            <Stack />
+            <hr className="w-full border-t-8 border-double border-secondary-main" />
         </main>
     )
 }
