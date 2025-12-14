@@ -9,7 +9,7 @@ const Education = (): JSX.Element => {
     <section className="row-start-5 row-span-1 h-auto py-20 mb-5 flex flex-col items-center justify-between text-third-main">
         <h1 className="mb-12 text-4xl">Education</h1>
         <div className="w-full h-auto grid grid-cols-1 md:grid-cols-2 gap-10 px-10">
-            <article>
+            <article className="flex flex-col items-center justify-center h-auto lg:pl-24">
                 <div className="flex flex-col h-auto">
                     <div className="border-l-4 m-8 pl-8 border-secondary-main">
                         <h2 className="text-3xl">Front-end Developer</h2>

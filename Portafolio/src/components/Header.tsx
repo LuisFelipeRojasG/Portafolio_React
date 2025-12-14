@@ -10,7 +10,7 @@ const Header = (): JSX.Element => {
                     L
                 </p>
             </div>
-            <nav className="hidden md:flex bg-primary-main opacity[0.9]">
+            <nav className="hidden lg:flex bg-primary-main opacity[0.9]">
                 <ul className="flex justify-between gap-8 text-third-main text-xl font-bold">
                     <li><a href='/main'>About</a></li>
                     <li><a href='/line-education'>Education</a></li>
@@ -20,7 +20,7 @@ const Header = (): JSX.Element => {
                     <li><a href='/line-contact'>Contact</a></li>
                 </ul>
             </nav>
-            <button className="md:hidden">
+            <button className="lg:hidden">
                 <TiThMenu size={45} className="fill-third-main" />
             </button>
         </header>

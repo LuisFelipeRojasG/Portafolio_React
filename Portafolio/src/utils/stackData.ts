@@ -56,7 +56,7 @@ export const stackData: Icons[] = [
     },
     {
         link: Mysql_icon,
-        name: "mysql"
+        name: "Mysql"
     },
     {
         link: Figma_icon,

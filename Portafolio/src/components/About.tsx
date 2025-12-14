@@ -5,8 +5,8 @@ import { handleDownloadCV } from "../utils/functions"
 const About = (): JSX.Element => {
     return (
         <section className="row-start-3 row-span-1 w-full h-auto py-20 flex flex-col items-center justify-center text-third-main px-10 bg-paper-redark">
-            <h1 className="p-6 text-center text-4xl">About me</h1>
-            <p className="p-6 text-xl max-w-7xl">
+            <h1 className="py-6 text-center text-4xl">About me</h1>
+            <p className="p-6 text-xl max-w-7xl lg:px-20">
                 I have more than 17 years of experience in an electronic
                 company that creates and sells different solutions for many
                 industries. In my different positions during these years, I have
