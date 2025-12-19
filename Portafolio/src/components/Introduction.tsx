@@ -6,7 +6,7 @@ import githubIcon from "../assets/icons/github-brands.svg"
 
 const Introduction = (): JSX.Element => {
     return (
-        <section className="absolute row-start-2 row-span-1 w-full h-auto mt-12 flex flex-col items-center justify-center xl:flex-row-reverse xl:mt-36 text-third-main">
+        <section id="introduction" className="absolute row-start-2 row-span-1 w-full h-auto mt-12 flex flex-col items-center justify-center xl:flex-row-reverse xl:mt-36 text-third-main">
             <figure className="w-[200px] h-[250px] left-[calc(50%-100px)] m-[40px, 0] p-2.5 border-5 border-solid border-secondary-main rounded-[10px]">
                 <img
                     src={mainImage}

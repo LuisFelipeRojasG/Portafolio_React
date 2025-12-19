@@ -50,3 +50,24 @@
     }
 }
 
+li {
+    padding-bottom: 4px;
+}
+
+li.active {
+    font-weight: bold;
+}
+
+a {
+    cursor: pointer;
+}
+
+.activeLink{
+    @apply text-paper-dark;
+    @layer active;
+}
+
+.noActiveLink{
+    @apply text-third-main;
+    @layer active;
+}

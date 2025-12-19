@@ -11,7 +11,7 @@ import Projects from "./Projects"
 const Main = (): JSX.Element => {
     return (
         <main className="w-screen h-auto mt-[70px] grid grid-cols-1 grid-rows-[repeat(6,auto)] font-display">
-            <section className="row-span-1 row-start-1 relative w-screen h-[450px] mb-[210px] xl:mb-40 overflow-hidden">
+            <section id="home" className="row-span-1 row-start-1 relative w-screen h-[450px] mb-[210px] xl:mb-40 overflow-hidden">
                 <AnimatedWave />
             </section>
             <Introduction />

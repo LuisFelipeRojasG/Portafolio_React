@@ -9,7 +9,7 @@ const Certifications = (): JSX.Element => {
 
 
     return (
-        <section className="row-start-7 row-span-1 h-auto py-20 flex flex-col items-center justify-center text-third-main bg-paper-redark">
+        <section id="certifications" className="row-start-7 row-span-1 h-auto py-20 flex flex-col items-center justify-center text-third-main bg-paper-redark">
             <h1 className="mb-12 text-4xl">Certifications</h1>
             <p className="text-2xl mb-10">My recent certifications</p>
             <div className="w-full flex flex-col items-center justify-center relative">

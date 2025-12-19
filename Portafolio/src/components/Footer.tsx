@@ -3,7 +3,7 @@ import { FaLinkedin, FaGithub, FaXTwitter  } from "react-icons/fa6";
 
 const Footer = (): JSX.Element => {
   return (
-    <section className="flex flex-col justify-center items-center gap-4 bg-primary-main h-[150px] w-screen text-third-main px-10 py-5">
+    <section id="contact" className="flex flex-col justify-center items-center gap-4 bg-primary-main h-[150px] w-screen text-third-main px-10 py-5">
       <div>
         <h2>
           You may also find me on these platforms!

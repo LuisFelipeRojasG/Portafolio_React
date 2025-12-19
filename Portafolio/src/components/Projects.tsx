@@ -5,7 +5,7 @@ import { projectsData } from "../utils/projectsData"
 const Projects = (): JSX.Element => {
 
     return (
-        <section className="row-start-11 row-span-1 h-auto py-20 flex flex-col items-center justify-center text-third-main bg-paper-redark">
+        <section id="projects" className="row-start-11 row-span-1 h-auto pt-20 pb-40 flex flex-col items-center justify-center text-third-main bg-paper-redark">
             <h2 className="mb-12 text-4xl">My Projects</h2>
             <div className="flex flex-wrap justify-center gap-12">
                 {

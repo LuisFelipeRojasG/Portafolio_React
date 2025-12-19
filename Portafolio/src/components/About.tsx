@@ -4,7 +4,7 @@ import { handleDownloadCV } from "../utils/functions"
 
 const About = (): JSX.Element => {
     return (
-        <section className="row-start-3 row-span-1 w-full h-auto py-20 flex flex-col items-center justify-center text-third-main px-10 bg-paper-redark">
+        <section id="about" className="row-start-3 row-span-1 w-full h-auto py-20 flex flex-col items-center justify-center text-third-main px-10 bg-paper-redark">
             <h1 className="py-6 text-center text-4xl">About me</h1>
             <p className="p-6 text-xl max-w-7xl lg:px-20">
                 I have more than 17 years of experience in an electronic
@@ -19,7 +19,7 @@ const About = (): JSX.Element => {
                 day.
             </p>
             <div className="w-screen h-auto flex justify-center items-center mt-6">
-                <button className="w-48 h-16 my-6 mx-8 text-center bg-paper-dark text-third-main text-2xl border-4 border-solid border-third-main rounded-xl"
+                <button className="w-48 h-16 my-6 mx-8 text-center bg-paper-dark text-third-main text-2xl border-4 border-solid border-third-main rounded-xl cursor-pointer"
                     onClick={handleDownloadCV}
                 >
                     Download CV
