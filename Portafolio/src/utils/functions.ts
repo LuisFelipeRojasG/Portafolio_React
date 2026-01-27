@@ -1,6 +1,5 @@
 import { useState, useEffect, useRef } from "react"
 import type { RefObject } from "react"
-import { sliderData } from "./sliderData"
 
 // Function to handle CV download
 const handleDownloadCV = (): void => {
@@ -8,39 +7,84 @@ const handleDownloadCV = (): void => {
         window.open(pdfPath, '_blank')
 }
 
-// Function for slider navigation
 const useSlider = () => {
-    const [currentIndex, setCurrentIndex] = useState<number>(0)
+    const [ positionIndexes, setPositionIndexes ] = useState<Array<number>>([1, 2, 3, 4, 5, 6, 7, 8])
 
-    const goToNext = (): void => {
-        setCurrentIndex((prevIndex) => 
-            prevIndex === sliderData.length - 1 ? 0 : prevIndex + 1
-        )
-    }
+    const positions = [
+        "center",
+        "right",
+        "left"
+    ]
 
-    const goToPrevious = (): void => {
-        setCurrentIndex((prevIndex) => 
-            prevIndex === 0 ? sliderData.length - 1 : prevIndex - 1
-        )
-    }
-
-    const goToSlide = (index: number): void => {
-        if (index >= 0 && index < sliderData.length) {
-            setCurrentIndex(index)
+    const imageVariantsMobile = {
+        center: {
+            x: 0,
+            opacity: 1,
+            scale: 0.5,
+            zIndex: 2,
+            transition: { duration: 0.5 }
         }
     }
 
-    const getCurrentSlide = () => {
-        return sliderData[currentIndex]
+    const imageVariantsDesktop = {
+        center: {
+            x: 0,
+            opacity: 1,
+            scale: 1.5,
+            zIndex: 2,
+            transition: { duration: 0.5 }
+        },
+        right: {
+            x: 500,
+            opacity: 0.5,
+            scale: 0.8,
+            zIndex: 1,
+            transition: { duration: 0.5 }
+        },
+        left: {
+            x: -500,
+            opacity: 0.5,
+            scale: 0.8,
+            zIndex: 1,
+            transition: { duration: 0.5 }
+        }
+    }
+
+    const goToNext = (): void => {
+        setPositionIndexes((prevPositions) => {
+            const updatedIndexes = prevPositions.map((prevIndex) => 
+                (prevIndex + 1) % positionIndexes.length
+            )
+            return updatedIndexes
+        })
+    }
+
+    const goToPrevious = (): void => {
+        setPositionIndexes((prevPositions) => {
+            const updatedIndexes = prevPositions.map((prevIndex) => 
+                (prevIndex - 1 + positionIndexes.length) % positionIndexes.length
+            )
+            return updatedIndexes
+        })
+    }
+
+    const goToSlide = (index: number): void => {
+        if (index >= 0 && index < positionIndexes.length) {
+            const updatedIndexes = positionIndexes.map((_, i) => 
+                (index + i) % positionIndexes.length
+            )
+            setPositionIndexes(updatedIndexes)
+        }
     }
 
     return {
-        currentIndex,
+        positionIndexes,
         goToNext,
         goToPrevious,
         goToSlide,
-        getCurrentSlide,
-        totalSlides: sliderData.length
+        imageVariantsMobile,
+        imageVariantsDesktop,
+        positions
     }
 }
 
