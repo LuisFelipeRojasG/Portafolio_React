@@ -1,5 +1,5 @@
 import type { JSX } from "react"
-import { FaLinkedin, FaGithub, FaXTwitter  } from "react-icons/fa6";
+import { FaLinkedin, FaGithub } from "react-icons/fa6";
 
 const Footer = (): JSX.Element => {
   return (
@@ -18,10 +18,6 @@ const Footer = (): JSX.Element => {
         <a href={"https://github.com/LuisFelipeRojasG"}
         >
           <FaGithub size={50}/>
-        </a>
-        <a href={"https://twitter.com/latisstingrey"}
-        >
-          <FaXTwitter size={50}/>
         </a>
       </div>
       <div>

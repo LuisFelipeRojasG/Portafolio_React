@@ -9,6 +9,7 @@ import Figma_icon from "../assets/icons/figma-icon.svg"
 import Python_icon from "../assets/icons/python-icon.svg"
 import Django_icon from "../assets/icons/django-icon.svg"
 import Mysql_icon from "../assets/icons/mysql-icon.svg"
+import Opencode_icon from "../assets/icons/opencode-icon.svg"
 
 
 
@@ -57,6 +58,10 @@ export const stackData: Icons[] = [
     {
         link: Mysql_icon,
         name: "Mysql"
+    },
+    {
+        link: Opencode_icon,
+        name: "Opencode"
     },
     {
         link: Figma_icon,

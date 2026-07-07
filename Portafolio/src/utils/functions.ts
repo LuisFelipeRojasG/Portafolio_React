@@ -3,7 +3,7 @@ import type { RefObject } from "react"
 
 // Function to handle CV download
 const handleDownloadCV = (): void => {
-    const pdfPath = '/document/CV-Luis_Felipe_Rojas_Frontend_Developer.pdf'
+    const pdfPath = 'https://drive.google.com/file/d/1EWsnBRR1PgRCK1i51Nf27Jw5ao3Ujigv/view?usp=drive_link'
         window.open(pdfPath, '_blank')
 }
 
@@ -109,7 +109,7 @@ const useSlider = () => {
  * Devuelve: `activeId` (string | null) — el identificador de la sección activa o `null`.
  */
 const useActiveOnTop = <T extends HTMLElement = HTMLElement>(
-    refs: Array<RefObject<T>>,
+    refs: Array<RefObject<T | null>>,
     options?: { offset?: number; threshold?: number; idAttribute?: string }
 ) => {
     const { offset = 0, threshold = 100, idAttribute = "id" } = options || {}

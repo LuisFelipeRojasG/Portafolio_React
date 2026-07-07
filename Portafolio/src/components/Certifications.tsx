@@ -14,8 +14,8 @@ const Certifications = (): JSX.Element => {
             <h1 className="mb-12 text-4xl">Certifications</h1>
             <p className="text-2xl mb-40">My recent certifications</p>
             <div className="w-full flex flex-col items-center justify-center relative">
-                <div className="w-full h-[500px] flex items-center justify-center gap-130 lg:gap-360 mb-4">
-                    <button onClick={goToPrevious}>
+                <div className="w-full h-[500px] flex items-center justify-center gap-130 lg:gap-200 mb-4">
+                    <button className=" hover:cursor-pointer" onClick={goToPrevious}>
                         <FaArrowAltCircleLeft size={50} />
                     </button>
                     {
@@ -31,7 +31,7 @@ const Certifications = (): JSX.Element => {
                         ))
                     }
 
-                    <button onClick={goToNext}>
+                    <button className=" hover:cursor-pointer" onClick={goToNext}>
                         <FaArrowAltCircleRight size={50} />
                     </button>
                 </div>
@@ -41,7 +41,7 @@ const Certifications = (): JSX.Element => {
                         <button 
                             key={index}
                             onClick={() => goToSlide(index)}
-                            className={`${index === positionIndexes[0] ? 'active' : ''} mx-1`}
+                            className={`${index === positionIndexes[0] ? 'active' : ''} mx-1 hover:cursor-pointer`}
                         >
                             {index === positionIndexes[0] ? <CgLoadbar size={60}/> : <FaCircle />}
                         </button>

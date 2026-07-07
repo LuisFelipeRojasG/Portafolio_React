@@ -3,21 +3,24 @@ import Main from "./components/Main"
 import Footer from "./components/Footer"
 import { useEffect, useMemo } from "react"
 import type { RefObject } from "react"
+import React from "react"
 import { useActiveOnTop } from "./utils/functions"
 
+const sectionIds = [
+  'home',
+  'introduction',
+  'about',
+  'education',
+  'certifications',
+  'stack',
+  'projects'
+]
+
 function App() {
-  const sectionIds = [
-    'home',
-    'introduction',
-    'about',
-    'education',
-    'certifications',
-    'stack',
-    'projects'
-  ]
 
   // Refs collection kept stable across renders
-  const refs = useMemo(() => sectionIds.map(() => ({ current: null } as RefObject<HTMLElement>)), [])
+  const refs: Array<RefObject<HTMLElement | null>> = useMemo(() => sectionIds.map(() => React.createRef<HTMLElement>()), [])
+
 
   useEffect(() => {
     // Populate refs from DOM once the components mount

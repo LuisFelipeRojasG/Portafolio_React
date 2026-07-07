@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react"
-import { TiThMenu } from "react-icons/ti"
+import { FaX, FaBars } from "react-icons/fa6"
 import type { JSX } from "react"
 import { navLinks } from "../utils/navlinks"
+import MobileMenu from "./MobileMenu"
 
 type HeaderProps = {
     activeHref?: string | null
@@ -9,7 +10,13 @@ type HeaderProps = {
 
 const Header = ({ activeHref }: HeaderProps): JSX.Element => {
 
-    const [activeTabBar, setActiveTabBar] = useState('#home');
+    const [activeTabBar, setActiveTabBar] = useState<string>('#home')
+
+    const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false)
+
+    const closeMenu = () => {
+        setIsMenuOpen(false)
+    }
 
     useEffect(() => {
         if (activeHref) setActiveTabBar(activeHref)
@@ -31,9 +38,13 @@ const Header = ({ activeHref }: HeaderProps): JSX.Element => {
                     ))}
                 </ul>
             </nav>
-            <button className="lg:hidden">
-                <TiThMenu size={45} className="fill-third-main" />
+            <button 
+                className="lg:hidden"
+                onClick={() => isMenuOpen ? setIsMenuOpen(false) : setIsMenuOpen(true)}
+            >
+                {isMenuOpen ? <FaX size={45} className="fill-third-main" /> : <FaBars size={45} className="fill-third-main" />}
             </button>
+            {isMenuOpen && <MobileMenu closeMenu={closeMenu} />}
         </header>
     )
 }

@@ -1,4 +1,5 @@
 import littleLemon from "../assets/images/LittleLemon01.webp"
+import avon from "../assets/images/Avon.png"
 
 interface cards {
     image: string
@@ -17,5 +18,13 @@ export const projectsData: cards[] = [
         link_live: "https://luisfeliperojasg.github.io/littleLemon/",
         link_git: "https://github.com/LuisFelipeRojasG/littleLemon",
         icons: ["React", "Tailwind", "Typescript", "Django", "mysql"]
+    },
+    {
+        image: avon,
+        title: "Avon E-commerce Website",
+        description: "This project involved creating a responsive e-commerce website using React, Tailwind CSS. The website features a user-friendly interface to enhance the shopping experience.",
+        link_live: "https://luisfeliperojasg.github.io/ecommerceavion/",
+        link_git: "https://github.com/LuisFelipeRojasG/ecommerceavion",
+        icons: ["React", "Tailwind", "figma", "opencode"]
     }
 ]
