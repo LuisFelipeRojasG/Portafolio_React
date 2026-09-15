@@ -1,7 +1,6 @@
 import type { JSX } from "react"
 import españolIcon from "../assets/icons/Español.png"
 import inglesIcon from "../assets/icons/Ingles.webp"
-import francesIcon from "../assets/icons/Francias.webp" 
 
 
 const Education = (): JSX.Element => {
@@ -46,15 +45,6 @@ const Education = (): JSX.Element => {
                         />
                     </figure>
                     <p className="mt-4 text-xl">English B1+</p>
-                </div>
-                <div className="flex flex-col justify-between w-60 max-h-96 m-5 p-5 border-8 border-third-main rounded-xl">
-                    <figure>
-                        <img className=" aspect-3/2"
-                            src={francesIcon}
-                            alt="French A1"
-                        />
-                    </figure>
-                    <p className="mt-4 text-xl">French A1</p>
                 </div>
             </article>
         </div>

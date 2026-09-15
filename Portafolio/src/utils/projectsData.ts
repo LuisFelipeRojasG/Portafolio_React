@@ -15,8 +15,8 @@ export const projectsData: cards[] = [
         image: littleLemon,
         title: "Little Lemon Restaurant Website",
         description: "This project involved creating a responsive restaurant website using React, Typescript, Tailwind CSS, Django, mysql. The website features a user-friendly interface to enhance the dining experience.",
-        link_live: "https://luisfeliperojasg.github.io/littleLemon/",
-        link_git: "https://github.com/LuisFelipeRojasG/littleLemon",
+        link_live: "https://luisfeliperojasg.github.io/Lemon_restaurant/",
+        link_git: "https://github.com/LuisFelipeRojasG/Lemon_restaurant",
         icons: ["React", "Tailwind", "Typescript", "Django", "mysql"]
     },
     {
