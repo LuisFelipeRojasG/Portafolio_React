@@ -26,19 +26,33 @@ const Header = ({ activeHref }: HeaderProps): JSX.Element => {
         <header className="fixed w-full h-[75px] z-10 flex justify-between px-10 items-center bg-primary-main">
             <div className="w-auto h-auto text-center px-3 py-1 border-2 border-solid border-third-main rounded-sm text-third-main">
                 <p className="text-3xl">
-                    <a onClick={() => setActiveTabBar('#home')} href="#home">L</a>                    
+                    <a
+                        aria-label="Home"
+                        onClick={() => setActiveTabBar('#home')}
+                        href="#home"
+                    >
+                        L
+                    </a>
                 </p>
             </div>
             <nav className="hidden lg:flex bg-primary-main opacity[0.9]">
                 <ul className="flex justify-between gap-8 text-third-main text-xl font-bold">
                     {navLinks.map((link) => (
                         <li key={link.href}>
-                            <a onClick={() => setActiveTabBar(link.href)} className={` hover:text-paper-dark ${activeTabBar === link.href ? 'activeLink' : 'noActiveLink'}`} href={link.href}>{link.name}</a>
+                            <a
+                                aria-label={link.name}
+                                onClick={() => setActiveTabBar(link.href)}
+                                className={` hover:text-paper-dark ${activeTabBar === link.href ? 'activeLink' : 'noActiveLink'}`}
+                                href={link.href}
+                            >
+                                {link.name}
+                            </a>
                         </li>
                     ))}
                 </ul>
             </nav>
-            <button 
+            <button
+                aria-label="Toggle menu"
                 className="lg:hidden"
                 onClick={() => isMenuOpen ? setIsMenuOpen(false) : setIsMenuOpen(true)}
             >

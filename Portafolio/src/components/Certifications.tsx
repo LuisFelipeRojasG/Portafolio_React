@@ -1,5 +1,6 @@
 import { type JSX } from "react"
-import { motion } from "framer-motion"
+import { LazyMotion, domAnimation } from "motion/react"
+import * as m from "motion/react-m"
 import { sliderData } from "../utils/sliderData"
 import { useSlider } from "../utils/functions"
 import { FaArrowAltCircleRight, FaArrowAltCircleLeft, FaCircle } from "react-icons/fa";
@@ -15,33 +16,36 @@ const Certifications = (): JSX.Element => {
             <p className="text-2xl mb-40">My recent certifications</p>
             <div className="w-full flex flex-col items-center justify-center relative">
                 <div className="w-full h-[500px] flex items-center justify-center gap-130 lg:gap-200 mb-4">
-                    <button className=" hover:cursor-pointer" onClick={goToPrevious}>
+                    <button aria-label="Previous slide" className=" hover:cursor-pointer" onClick={goToPrevious}>
                         <FaArrowAltCircleLeft size={50} />
                     </button>
                     {
-                        sliderData.map((slide, index) => (
-                            <motion.figure 
-                                key={index}
-                                className="w-60 h-60 lg:w-[550px] lg:h-[448px] flex justify-center absolute "
-                                variants={screen.width < 768 ? imageVariantsMobile : imageVariantsDesktop}
-                                animate={positions[positionIndexes.indexOf(index)] ? positions[positionIndexes.indexOf(index)] : "hidden"}
-                            >
-                                <img className="max-w-[450px] max-h-[347px]" src={slide.link} alt={slide.title} />
-                            </motion.figure>
+                        sliderData.map((slide) => (
+                            <LazyMotion features={domAnimation} key={slide.id}>
+                                <m.figure 
+                                    key={slide.id}
+                                    className="w-60 h-60 lg:w-[550px] lg:h-[448px] flex justify-center absolute "
+                                    variants={screen.width < 768 ? imageVariantsMobile : imageVariantsDesktop}
+                                    animate={positions[positionIndexes.indexOf(slide.id)] ? positions[positionIndexes.indexOf(slide.id)] : "hidden"}
+                                >
+                                    <img className="max-w-[450px] max-h-[347px]" src={slide.link} alt={slide.title} />
+                                </m.figure>
+                            </LazyMotion>
                         ))
                     }
 
-                    <button className=" hover:cursor-pointer" onClick={goToNext}>
+                    <button aria-label="Next slide" className=" hover:cursor-pointer" onClick={goToNext}>
                         <FaArrowAltCircleRight size={50} />
                     </button>
                 </div>
                 {/* Indicadores de puntos */}
                 <div className="flex">
                     {Array.from({ length: totalSlides }).map((_, index) => (
-                        <button 
+                        <button
                             key={index}
                             onClick={() => goToSlide(index)}
                             className={`${index === positionIndexes[0] ? 'active' : ''} mx-1 hover:cursor-pointer`}
+                            aria-label={`Go to slide ${index + 1}`}
                         >
                             {index === positionIndexes[0] ? <CgLoadbar size={60}/> : <FaCircle />}
                         </button>

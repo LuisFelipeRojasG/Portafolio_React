@@ -9,16 +9,16 @@ const Projects = (): JSX.Element => {
             <h2 className="mb-12 text-4xl">My Projects</h2>
             <div className="flex flex-wrap justify-center gap-12 xl:flex-col">
                 {
-                    projectsData.map((project, index) => (
-                        <div key={index} className=" bg-paper-dark rounded-lg shadow-lg p-6 w-80 xl:w-220 xl:h-96 xl:grid xl:grid-cols-2 gap-6 border-4 border-secondary-main">
+                    projectsData.map((project) => (
+                        <div key={project.id} className=" bg-paper-dark rounded-lg shadow-lg p-6 w-80 xl:w-220 xl:h-96 xl:grid xl:grid-cols-2 gap-6 border-4 border-secondary-main">
                             <img className="h-40 mb-8 xl:w-auto xl:h-full" src={project.image} alt={project.title} />
                             <div>
                                 <h3 className="text-2xl mb-4">{project.title}</h3>
                                 <p className="mb-4">{project.description}</p>
                                 <div className="flex flex-wrap mb-4 xl:mb-16">
-                                    {project.icons.map((icon, idx) => (
-                                        <span key={idx} className="bg-paper-redark  rounded-full px-3 py-1 text-sm mr-2 mb-2">
-                                            {icon}
+                                    {Object.values(project.icons).map((icon) => (
+                                        <span key={icon.slug} className="bg-paper-redark  rounded-full px-3 py-1 text-sm mr-2 mb-2">
+                                            {icon.name}
                                         </span>
                                     ))}
                                 </div>

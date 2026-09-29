@@ -11,11 +11,14 @@ const Footer = (): JSX.Element => {
       </div>
       <div className="flex flex-row justify-between w-full max-w-sm gap-8">
         <a
+          aria-label="LinkedIn profile"
           href={"https://www.linkedin.com/in/luis-felipe-rojas-gonzalez-69213b66/"}
         >
           <FaLinkedin size={50}/>
         </a>
-        <a href={"https://github.com/LuisFelipeRojasG"}
+        <a
+          aria-label="GitHub profile"
+          href={"https://github.com/LuisFelipeRojasG"}
         >
           <FaGithub size={50}/>
         </a>
