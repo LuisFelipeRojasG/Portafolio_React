@@ -5,15 +5,15 @@ Este proyecto es mi portafolio profesional donde muestro mis skills, que experie
 
 ## Capturas
 
-![img](src/assets/images/Captura_1.webp)
+![img](Portafolio/src/assets/images/Captura_1.webp)
 
-![img](src/assets/images/Captura_2.webp)
+![img](Portafolio/src/assets/images/Captura_2.webp)
 
-![img](src/assets/images/Captura_3.webp)
+![img](Portafolio/src/assets/images/Captura_3.webp)
 
-![img](src/assets/images/Captura_4.webp)
+![img](Portafolio/src/assets/images/Captura_4.webp)
 
-![img](src/assets/images/Captura_5.webp)
+![img](Portafolio/src/assets/images/Captura_5.webp)
 
 
 ## Tecnologías
